@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Tab from './component/Tab.js'
+import Accordion from './component/Accordion.js'
+import List from './component/List.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main flex">
+      <Tab />
+      <ul className="accordion-wrap">
+        <Accordion idx={1} />
+        <Accordion idx={2} />
+      </ul>
+      <List />
     </div>
   );
 }
